@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 新增核心：移动端缩放适配，解决小屏错乱 -->
+    <!-- 移动端缩放适配 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>全国企业信用信息公示平台 - 河北州晖管道装备有限公司</title>
     <style>
@@ -16,22 +16,22 @@
             width: 100%;
             max-width: 1731px;
             margin: 0 auto;
-            overflow-x: hidden; /* 禁止横向滚动溢出 */
+            overflow-x: hidden;
         }
-        /* 顶部红条 */
+        /* 顶部红条：文字左对齐，取消居中 */
         .top-red-bar {
             background: #d80000;
             color: #fff;
             padding: 8px 20px;
-            font-size: clamp(12px, 2vw, 14px); /* 自适应字号 */
-            text-align: center;
+            font-size: clamp(12px, 2vw, 14px);
+            text-align: left;
         }
-        /* 导航栏蓝色 响应式重构 */
+        /* 导航栏蓝色 */
         .nav-bar {
             background: #1954b9;
             display: flex;
             align-items: center;
-            flex-wrap: wrap; /* 空间不足自动换行，解决挤压 */
+            flex-wrap: wrap;
             justify-content: center;
             padding: 0 10px;
             min-height: 50px;
@@ -64,18 +64,16 @@
             padding-left: 8px;
             cursor: pointer;
         }
-        /* 头部红色大区域 修复gap语法+自适应标题 */
+        /* 头部红色大区域：强制同行，禁止换行，删除移动端竖排样式 */
         .header-red-big {
-    background: #d80000;
-    padding: 15px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 核心：nowrap 强制所有子元素一行，绝不换行 */
-    flex-wrap: nowrap;
-    gap: 20px;
-    row-gap: 15px;
-}
+            background: #d80000;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap; /* 强制不换行 */
+            gap: 20px;
+        }
         .logo-circle {
             width: clamp(70px, 12vw, 100px);
             height: clamp(70px, 12vw, 100px);
@@ -85,6 +83,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0; /* logo固定尺寸，不压缩 */
         }
         .logo-circle img{
             width:100%;
@@ -92,17 +91,16 @@
             object-fit:cover;
             border-radius:50%;
         }
-        /* 主标题楷体设置 自适应字号，不会溢出 */
+        /* 主标题：强制不换行，允许小幅缩放但始终同行 */
         .main-title {
-    font-size: clamp(24px, 6vw, 38px);
-    color: #000;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-family: "KaiTi", "楷体", SimSun, serif;
-    text-align: center;
-    white-space: nowrap;
-    flex-shrink: 1;
-}
+            font-size: clamp(24px, 6vw, 38px);
+            color: #000;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: "KaiTi", "楷体", SimSun, serif;
+            white-space: nowrap;
+            flex-shrink: 1;
+        }
         /* 大厅横幅图 */
         .banner-img {
             width: 100%;
@@ -118,7 +116,6 @@
             gap: 20px;
             padding: 20px 10px;
         }
-        /* 标语文字楷体 */
         .slogan-text {
             font-size: clamp(16px, 4vw, 24px);
             color: #000;
@@ -179,7 +176,7 @@
             height:100%;
             object-fit:cover;
         }
-        /* 手机媒体查询 强化修正 */
+        /* 媒体查询：完全删除header-red-big竖排代码，只微调导航栏 */
         @media screen and (max-width: 768px) {
             .nav-bar {
                 padding: 5px 0;
@@ -187,14 +184,12 @@
             .nav-item {
                 line-height: 40px;
             }
-            .header-red-big {
-                flex-direction: column;
-            }
+            /* 移除原手机端flex-direction:column，保持横向一行 */
         }
     </style>
 </head>
 <body>
-    <!-- 顶部红色欢迎栏 -->
+    <!-- 顶部红色欢迎栏：文字靠左 -->
     <div class="top-red-bar">欢迎访问全国企业信用联盟共享网</div>
 
     <!-- 蓝色导航栏 -->
@@ -210,10 +205,9 @@
         </div>
     </div>
 
-    <!-- 大红头区域 logo+大标题 -->
+    <!-- 大红头区域 logo+大标题：永久同行不换行 -->
     <div class="header-red-big">
         <div class="logo-circle">
-            <!-- 替换成你的信用圆形logo图片 -->
             <img src="imges/20171954_1597891349.webp" alt="信用logo">
         </div>
         <div class="main-title">全国企业信用信息公示平台</div>
@@ -245,7 +239,6 @@
         技术支持: 中国信用建设委员会办公室<br>
         指导文件: 国办发(2014)第21号《国务院社会信用体系建设规划纲要（2014-2020年）》国办(2007)第17号《国务院办公厅关于社会信用体系建设的若干意见》国务院办公厅《征信业管理条例》(中华人民共和国国务院令第631号)<br>
         <br>
-       <!--  技术支持: 建站ABC | 管理登录 -->
     </div>
 
     <!-- 右侧客服头像 
