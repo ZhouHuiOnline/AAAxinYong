@@ -66,15 +66,16 @@
         }
         /* 头部红色大区域 修复gap语法+自适应标题 */
         .header-red-big {
-            background: #d80000;
-            padding: 15px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           /*  flex-wrap: wrap; 手机自动上下排列logo+标题 */
-            gap: 20px;
-            row-gap: 15px;
-        }
+    background: #d80000;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 核心：nowrap 强制所有子元素一行，绝不换行 */
+    flex-wrap: nowrap;
+    gap: 20px;
+    row-gap: 15px;
+}
         .logo-circle {
             width: clamp(70px, 12vw, 100px);
             height: clamp(70px, 12vw, 100px);
