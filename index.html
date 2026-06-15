@@ -94,14 +94,15 @@
         }
         /* 主标题楷体设置 自适应字号，不会溢出 */
         .main-title {
-            font-size: clamp(24px, 6vw, 38px);
-            color: #000;
-            font-weight: bold;
-            letter-spacing: 2px;
-            font-family: "KaiTi", "楷体", SimSun, serif;
-            text-align: center;
-            white-space: normal;
-        }
+    font-size: clamp(24px, 6vw, 38px);
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: "KaiTi", "楷体", SimSun, serif;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
         /* 大厅横幅图 */
         .banner-img {
             width: 100%;
