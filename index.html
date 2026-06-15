@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全国企业信用信息公示平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", SimSun, sans-serif;
+        }
+        body {
+            width: 100%;
+            max-width: 1731px;
+            margin: 0 auto;
+        }
+        /* 顶部红条 */
+        .top-red-bar {
+            background: #d80000;
+            color: #fff;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
+        /* 导航栏蓝色 */
+        .nav-bar {
+            background: #1954b9;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            height: 50px;
+        }
+        .nav-item {
+            color: #fff;
+            font-size: 16px;
+            padding: 0 35px;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .search-box {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            width: 180px;
+        }
+        .search-btn {
+            border-left: 1px solid #ccc;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+        /* 头部红色大区域 */
+        .header-red-big {
+            background: #d80000;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #d80000;
+        }
+        .main-title {
+            font-size: 38px;
+            color: #000;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        /* 大厅横幅图 */
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* 红底标语栏 */
+        .slogan-bar {
+            background: #d80000;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .slogan-text {
+            font-size: 24px;
+            color: #000;
+        }
+        /* 面包屑路径 */
+        .breadcrumb {
+            padding: 20px 20px;
+            font-size: 14px;
+            color: #333;
+        }
+        .breadcrumb a {
+            color: #1954b9;
+            text-decoration: none;
+        }
+        /* 公司名称标题 */
+        .company-name-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            width: 90%;
+            margin: 0 auto;
+        }
+        /* 蓝色分隔条 */
+        .blue-divider {
+            background: #1954b9;
+            height: 40px;
+            width: 90%;
+            margin: 20px auto;
+        }
+        /* 底部版权文字 */
+        .copyright-text {
+            text-align: center;
+            font-size: 13px;
+            color: #5577aa;
+            line-height: 24px;
+            padding: 10px 20px;
+        }
+        /* 右下角客服头像占位 */
+        .service-avatar {
+            position: fixed;
+            right: 20px;
+            top: 450px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部红色欢迎栏 -->
+    <div class="top-red-bar">欢迎访问全国企业信用联盟共享网</div>
+
+    <!-- 蓝色导航栏 -->
+    <div class="nav-bar">
+        <div class="nav-item">首页</div>
+        <div class="nav-item">政策文件</div>
+        <div class="nav-item">行业规范</div>
+        <div class="nav-item">信用建设</div>
+        <div class="nav-item">热点推荐</div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="企业信用查询会员中心">
+            <span class="search-btn">🔍</span>
+        </div>
+    </div>
+
+    <!-- 大红头区域 logo+大标题 -->
+    <div class="header-red-big">
+        <div class="logo-circle">信</div>
+        <div class="main-title">全国企业信用信息公示平台</div>
+    </div>
+
+    <!-- 会场横幅图片 -->
+    <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/3322200033934444999~tplv-a9rns2rl98-image.image" alt="会场大厅" class="banner-img">
+
+    <!-- 标语红条 -->
+    <div class="slogan-bar">
+        <div class="slogan-text">追求质量诚信</div>
+        <div class="slogan-text">践行社会责任</div>
+    </div>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <a href="#">首页</a> >> <a href="#">证书查询公示系统</a> >> <span>河北州晖管道装备有限公司</span>
+    </div>
+
+    <!-- 公司大标题 -->
+    <div class="company-name-title">河北州晖管道装备有限公司</div>
+
+    <!-- 蓝色横条 -->
+    <div class="blue-divider"></div>
+
+    <!-- 底部版权信息 -->
+    <div class="copyright-text">
+        版权所有: 中国企业信用建设联合委员会<br>
+        技术支持: 中国信用建设委员会办公室<br>
+        指导文件: 国办发(2014)第21号《国务院社会信用体系建设规划纲要（2014-2020年）》国办(2007)第17号《国务院办公厅关于社会信用体系建设的若干意见》国务院办公厅《征信业管理条例》(中华人民共和国国务院令第631号)<br>
+        <br>
+        技术支持: 建站ABC | 管理登录
+    </div>
+
+    <!-- 右侧客服头像 -->
+    <div class="service-avatar">👩</div>
+</body>
+</html>
